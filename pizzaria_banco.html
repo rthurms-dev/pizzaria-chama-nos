@@ -120,7 +120,7 @@ async function init(){
       db = loaded;
       statusEl.textContent = "Banco carregado do armazenamento local (dados já existentes).";
     } else {
-      db = new SQL.Database();
+      db = new SQLref.Database();
       PizzariaDB.buildSchema(db);
       PizzariaDB.seedData(db);
       PizzariaDB.save(db);
